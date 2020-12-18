@@ -1,12 +1,13 @@
-const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
+const mongoose = require('mongoose')
+mongoose.Promise = global.Promise
 
-const db = {};
+const db = {}
 
-db.mongoose = mongoose;
+db.mongoose = mongoose
 
-// db.flight = require("./flight.model");
-// db.terminal = require("./terminal.model");
-db.airport = require("./airport.model");
+db.flight = require('./flight.model')
+db.terminal = require('./terminal.model')
+db.airport = require('./airport.model')
+db.passenger = require('./passenger.model')
 
-module.exports = db;
+module.exports = db
