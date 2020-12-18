@@ -76,9 +76,10 @@ console.log('Terminal saved', terminal1)
 
 
 // add terminal to airport
-Airport.updateOne(
+Airport.findOneAndUpdate(
   {name: 'JFK'}, 
-  {$push: { terminals: terminal1 }}
+  {$push: { terminals: terminal1 }},
+  {useFindAndModify:false, new:true}
 )
   .exec((err,updatedAirport) => {console.log('Airport Updated', updatedAirport)})
   
